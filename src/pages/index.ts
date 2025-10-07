@@ -1,0 +1,9 @@
+export { default as Home } from "@/pages/authorized/Home";
+export { default as MyTasks } from "@/pages/authorized/Tasks";
+export { default as ForgetPassword } from "@/pages/non-authorized/ForgotPassword";
+export { default as Login } from "@/pages/non-authorized/Login";
+export { default as Logout } from "@/pages/non-authorized/Logout";
+export { default as ResetPassword } from "@/pages/non-authorized/ResetPassword";
+export { default as Signup } from "@/pages/non-authorized/Signup";
+export { default as VerifyEmail } from "@/pages/non-authorized/VerifyEmail";
+export { default as ErrorPage } from "@/pages/non-authorized/ErrorPage";

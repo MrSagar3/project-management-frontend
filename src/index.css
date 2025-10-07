@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .grid-layout {
+    display: grid;
+    grid-template-areas:
+      "member-section"
+      "status-section"
+      "tasks-section"
+      "project-section";
+    grid-template-rows: 174px, 366px, 337px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .fb-grid-layout {
+    display: grid;
+    grid-template-areas:
+      "member-section tasks-section"
+      "status-section tasks-section"
+      "project-section project-section";
+    grid-template-rows: 174px, 366px, 337px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  .area-member {
+    grid-area: member-section;
+  }
+
+  .area-status {
+    grid-area: status-section;
+  }
+  .area-tasks {
+    grid-area: tasks-section;
+  }
+  .area-project {
+    grid-area: project-section;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d;
+}
+@layer base {
+  :root {
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+.rdp-root {
+  --rdp-accent-color: black !important;
+  --rdp-accent-background-color: #f0f0f0;
+  --rdp-selected-border: none !important;
+  --rdp-week_number-height: 20px !important;
+  --rdd-week_number-width: 20px !important;
+  --rdp-day-height: 30px !important;
+  --rdp-day-width: 30px !important;
+  --rdp-day_button-height: 30px !important;
+  --rdp-day_button-width: 30px !important;
+  --rdp-nav_button-height: 20px !important;
+  --rdp-nav_button-width: 20px !important;
+  --rdp-nav-height: 40px !important;
+  --rdp-months-gap: 12px !important;
+  --rdp-today-color: red !important;
+}
+
+button:focus-visible {
+  outline: none;
+} /* Custom styles for react-tag-input */
+.ReactTags__tag {
+  cursor: pointer; /* Add cursor pointer here */
+}
+
+.ReactTags__tags {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping of tags, keeps everything in the same row */
+  gap: 8px; /* Adjust the horizontal space between tags */
+  width: 100%; /* Ensures the tags container takes the full width available */
+  align-items: center; /* Aligns the tags and input vertically in the same line */
+  color: rgba(0, 0, 0, 0.639);
+}
+
+.ReactTags__selected {
+  display: flex;
+  gap: 8px; /* Space between selected tags */
+  align-items: center; /* Ensures that tags are aligned with input */
+  padding-left: 8px;
+  font-size: 14px;
+}
+.ReactTags__selected {
+  cursor: pointer; /* Add cursor pointer here */
+}
+.ReactTags__tagInput {
+  display: flex;
+  flex-grow: 1;
+  /* padding: 1px 1px; */
+}
+
+.ReactTags__tagInput input {
+  border: none;
+  outline: none;
+  padding: 1px;
+  width: 70px;
+  /* flex-grow: 1; Allows the input to take up available space */
+}
+
+.ReactTags__remove {
+  margin-left: 3px;
+  padding-left: 2px;
+  cursor: pointer;
+}
+
+.ReactTags__remove svg {
+  fill: rgb(0, 0, 0);
+  width: 9px;
+  height: 9px;
+}
+.ReactTags__remove:hover svg {
+  fill: red;
+}
+
+.ReactTags__tagInputField::placeholder {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.549);
+}
+
+.ReactTags__tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  gap: 16px;
+}
+
+.ReactTags__tagInput {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.ReactTags__tagInputField {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ReactTags__selected {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90rem; 
+  gap: 2px;
+  justify-content: flex-start;
+}
+
+.ReactTags__tag {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  font-size: 12px;
+  margin: 2px;
+}
+
+.ReactTags__remove {
+  margin-left: 8px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #ff0000;
+  font-size: 14px;
+}
